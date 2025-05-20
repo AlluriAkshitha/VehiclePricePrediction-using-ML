@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predicted Vehicle Price</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+<body>
+<div class="main-container">
+    <div class="logo-side">
+        <lottie-player src="{{ url_for('static', filename='car.json') }}" background="transparent" speed="1" style="width: 900px; height: 500px;" loop autoplay></lottie-player>
+  
+    </div>
+    <div class="form-side">
+        <div class="card">
+            <h1>Predicted Vehicle Price</h1>
+            <div class="result">
+                {% if is_error %}
+                    {{ prediction }}
+                {% else %}
+                    ${{ prediction }}
+                {% endif %}
+            </div>
+            <a href="/">Predict another</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+body {
+    background: #f7f7f9;
+    color: #222;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+}
+.main-container {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;      /* Vertically center both sides */
+    justify-content: center;  /* Horizontally center content */
+    background: #f7f7f9;
+}
+
+.logo-side {
+    background: #fff;
+    width: 50vw;              /* Make both sides equal */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-right: 1px solid #eee;
+    min-height: 100vh;
+    padding: 0;               /* Remove padding */
+}
+
+.form-side {
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0;               /* Remove padding */
+}
+
+.card {
+    background: #fff;
+    padding: 2rem 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.06);
+    width: 100%;
+    max-width: 430px;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #222;
+    letter-spacing: 2px;
+}
+label {
+    margin-top: 1rem;
+    display: block;
+    color: #222;
+    font-weight: 500;
+}
+input[type="text"] {
+    width: 100%;
+    padding: 8px 10px;
+    margin-top: 0.3rem;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    background: #f7f7f9;
+    color: #222;
+}
+input[type="submit"] {
+    margin-top: 1.5rem;
+    width: 100%;
+    padding: 10px;
+    background: #222;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: background 0.2s, color 0.2s;
+}
+input[type="submit"]:hover {
+    background: #fff;
+    color: #222;
+    border: 1px solid #222;
+}
+.result {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-top: 1.2rem;
+    color: #007bff;
+}
+a {
+    color: #007bff;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin-top: 2rem;
+}
+a:hover {
+    text-decoration: underline;
+}
+@media (max-width: 900px) {
+    .main-container {
+        flex-direction: column;
+    }
+    .logo-side, .form-side {
+        width: 100vw;
+        min-height: 40vh;
+    }
+    .form-side {
+        min-height: 60vh;
+    }
+}
