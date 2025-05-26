@@ -5,25 +5,24 @@ body {
     min-height: 100vh;
     margin: 0;
 }
-
 .main-container {
     display: flex;
     min-height: 100vh;
-    align-items: center;
-    justify-content: center;
+    align-items: center;      /* Vertically center both sides */
+    justify-content: center;  /* Horizontally center content */
     background: #f7f7f9;
 }
 
 .logo-side {
     background: #fff;
-    width: 50vw;
+    width: 50vw;              /* Make both sides equal */
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     border-right: 1px solid #eee;
     min-height: 100vh;
-    padding: 0;
+    padding: 0;               /* Remove padding */
 }
 
 .form-side {
@@ -32,7 +31,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    padding: 0;
+    padding: 0;               /* Remove padding */
 }
 
 .card {
@@ -43,23 +42,19 @@ body {
     width: 100%;
     max-width: 430px;
 }
-
 h1 {
     text-align: center;
     margin-bottom: 1.5rem;
     color: #222;
     letter-spacing: 2px;
 }
-
 label {
     margin-top: 1rem;
     display: block;
     color: #222;
     font-weight: 500;
 }
-
-input[type="text"],
-select {
+input[type="text"] {
     width: 100%;
     padding: 8px 10px;
     margin-top: 0.3rem;
@@ -67,14 +62,7 @@ select {
     border-radius: 6px;
     background: #f7f7f9;
     color: #222;
-    font-family: inherit;
-    font-size: 1rem;
 }
-
-input[type="checkbox"] {
-    margin-right: 8px;
-}
-
 input[type="submit"] {
     margin-top: 1.5rem;
     width: 100%;
@@ -88,20 +76,17 @@ input[type="submit"] {
     letter-spacing: 1px;
     transition: background 0.2s, color 0.2s;
 }
-
 input[type="submit"]:hover {
     background: #fff;
     color: #222;
     border: 1px solid #222;
 }
-
 .result {
     text-align: center;
     font-size: 1.3rem;
     margin-top: 1.2rem;
     color: #007bff;
 }
-
 a {
     color: #007bff;
     text-decoration: none;
@@ -109,23 +94,17 @@ a {
     text-align: center;
     margin-top: 2rem;
 }
-
 a:hover {
     text-decoration: underline;
 }
-
-/* Responsive magic */
 @media (max-width: 900px) {
     .main-container {
         flex-direction: column;
     }
-
-    .logo-side,
-    .form-side {
+    .logo-side, .form-side {
         width: 100vw;
         min-height: 40vh;
     }
-
     .form-side {
         min-height: 60vh;
     }
