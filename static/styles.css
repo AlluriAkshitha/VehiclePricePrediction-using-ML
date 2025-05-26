@@ -1,102 +1,117 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background: #fafbfc;
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f5f6fa;
 }
 
-.right-panel {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 400px;
-  height: 100vh;
-  background: #fff;
-  box-shadow: -2px 0 16px rgba(0,0,0,0.06);
-  padding: 48px 36px 36px 36px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  z-index: 10;
-  border-radius: 16px 0 0 16px;
+.main-container {
+    display: flex;
+    flex-direction: row; /* Animation left, form right */
+    height: 100vh;
+    width: 100vw;
 }
 
-.right-panel h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 32px;
-  letter-spacing: 1px;
-  text-align: center;
+.logo-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    box-shadow: 2px 0 16px rgba(0,0,0,0.06);
+    padding: 40px;
 }
 
-.form-group {
-  margin-bottom: 20px;
+.form-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f6fa;
+    padding: 40px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.09);
+    padding: 40px 32px;
+    width: 100%;
+    max-width: 400px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 32px;
+    font-size: 2rem;
+    font-weight: 700;
 }
 
 label {
-  font-weight: 500;
-  margin-bottom: 6px;
-  display: block;
-  color: #222;
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #222;
 }
 
-select, input[type="text"], input[type="number"] {
-  width: 100%;
-  padding: 10px 12px;
-  border: 1px solid #e0e0e0;
-  border-radius: 6px;
-  background: #f8f8f8;
-  font-size: 1rem;
-  margin-bottom: 8px;
-  transition: border 0.2s;
-}
-
-select:focus, input:focus {
-  border: 1.5px solid #4a90e2;
-  outline: none;
-}
-
-.checkbox-group {
-  margin: 10px 0 18px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.checkbox-group label {
-  font-weight: 400;
-  color: #444;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-button {
-  width: 100%;
-  background: #222;
-  color: #fff;
-  font-size: 1.1rem;
-  font-weight: 600;
-  border: none;
-  border-radius: 6px;
-  padding: 14px 0;
-  margin-top: 12px;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-button:hover {
-  background: #4a90e2;
-}
-
-/* Responsive for smaller screens */
-@media (max-width: 900px) {
-  .right-panel {
-    position: static;
+input[type="text"],
+select {
     width: 100%;
-    height: auto;
-    border-radius: 0;
-    box-shadow: none;
-    padding: 32px 16px;
-  }
+    padding: 10px 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    background: #f8f8f8;
+    font-size: 1rem;
+    margin-bottom: 18px;
+    transition: border 0.2s;
+}
+
+input[type="text"]:focus,
+select:focus {
+    border: 1.5px solid #4a90e2;
+    outline: none;
+}
+
+input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    background: #222;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    padding: 14px 0;
+    margin-top: 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+input[type="submit"]:hover {
+    background: #4a90e2;
+}
+
+/* Responsive: stack columns on mobile */
+@media (max-width: 900px) {
+    .main-container {
+        flex-direction: column;
+    }
+    .logo-side, .form-side {
+        width: 100%;
+        min-height: 50vh;
+        box-shadow: none;
+        padding: 24px;
+    }
+    .card {
+        max-width: 100%;
+        padding: 24px 8px;
+    }
+    .logo-side lottie-player {
+        width: 100% !important;
+        height: auto !important;
+    }
 }
