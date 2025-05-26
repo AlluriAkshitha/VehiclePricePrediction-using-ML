@@ -14,24 +14,72 @@
     <div class="form-side">
         <form class="card" action="/predict" method="post">
             <h1>Vehicle Price Predictor</h1>
+                        <!-- Make -->
             <label for="make">Make (encoded):</label>
-            <input type="text" id="make" name="make" required>
+            <select id="make" name="make" required>
+                <option value="">Select</option>
+                <option value="0">0 (Chevrolet)</option>
+                <option value="1">1 (Dodge)</option>
+                <option value="2">2 (GMC)</option>
+                <option value="3">3 (Jeep)</option>
+                <option value="4">4 (Mercedes-Benz)</option>
+                <option value="5">5 (Nissan)</option>
+                <option value="6">6 (RAM)</option>
+            </select>
+
+            <!-- Model -->
             <label for="model">Model (encoded):</label>
-            <input type="text" id="model" name="model" required>
+            <select id="model" name="model" required>
+                <option value="">Select</option>
+                <option value="0">0 (3500)</option>
+                <option value="1">1 (Durango)</option>
+                <option value="2">2 (Grand Cherokee)</option>
+                <option value="3">3 (Hornet)</option>
+                <option value="4">4 (Murano)</option>
+                <option value="5">5 (Silverado 2500)</option>
+                <option value="6">6 (Sprinter 2500)</option>
+                <option value="7">7 (Wagoneer)</option>
+                <option value="8">8 (Yukon XL)</option>
+            </select>
+
+            <!-- Vehicle Age -->
             <label for="vehicle_age">Vehicle Age:</label>
             <input type="text" id="vehicle_age" name="vehicle_age" required>
+
+            <!-- Mileage -->
             <label for="mileage">Mileage:</label>
             <input type="text" id="mileage" name="mileage" required>
+
+            <!-- Cylinders -->
             <label for="cylinders">Cylinders:</label>
             <input type="text" id="cylinders" name="cylinders" required>
+
+            <!-- Doors -->
             <label for="doors">Doors:</label>
             <input type="text" id="doors" name="doors" required>
+
+            <!-- Engine Type -->
             <label for="engine_type">Engine Type (encoded):</label>
-            <input type="text" id="engine_type" name="engine_type" required>
+            <select id="engine_type" name="engine_type" required>
+                <option value="">Select</option>
+                <option value="0">0 (16V DDI DOHC Turbo Diesel)</option>
+                <option value="1">1 (16V MPFI OHV)</option>
+                <option value="2">2 (24V DDI OHV Turbo Diesel)</option>
+                <option value="3">3 (24V GDI DOHC Twin Turbo)</option>
+                <option value="4">4 (4 gasoline direct injection, DOHC, Multiair variable valve timing)</option>
+                <option value="5">5 (6 DOHC, variable valve control, regular unleaded)</option>
+                <option value="6">6 (6.2L V-8 gasoline direct injection, variable valve timing)</option>
+                <option value="7">7 (8 gasoline direct injection, variable valve control)</option>
+                <option value="8">8 (OHV)</option>
+            </select>
+
+            <!-- Checkboxes -->
             <label><input type="checkbox" name="fuel_gasoline"> Fuel: Gasoline</label>
             <label><input type="checkbox" name="transmission_automatic"> Transmission: Automatic</label>
             <label><input type="checkbox" name="drivetrain_fwd"> Drivetrain: Front-wheel Drive</label>
             <label><input type="checkbox" name="body_sedan"> Body: Sedan</label>
+
+            <!-- Submit -->
             <input type="submit" value="Predict Price">
         </form>
     </div>
